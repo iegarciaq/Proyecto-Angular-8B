@@ -6,6 +6,12 @@ import { RegisterComponent } from './auth/register/register.component';
 const routes: Routes = [
   // rutas
   {
+    //localhost:4200/dashboard/
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module')
+    .then(modulo => modulo.DashboardModule )
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
