@@ -1,0 +1,21 @@
+<h1 mat-dialog-title> {{action === 'add' ? 'Add product': 'Edit Product'}} </h1>
+
+
+<div mat-dialog-content>
+  <form [formGroup]="formGroup" (ngSubmit)="submitForm()" >
+    
+    <!-- Title's Field -->
+      <mat-form-field color="accent" appearance="fill" class="input-full-width">
+        <mat-label>Product's Title</mat-label>
+        <input formControlName="title" matInput autocomplete="off">
+      </mat-form-field>
+      <!-- Price's Field -->
+      <mat-form-field appearance="fill" class="input-full-width">
+        <mat-label>Product's Price</mat-label>
+        <input formControlName="price" type="number" matInput autocomplete="off">
+      </mat-form-field>
+      <!-- Submit Button -->
+      <button color="accent" [disabled]="!formGroup.valid" type="submit" class="putRight" mat-button> {{ action === 'add' ? 'Save': 'Edit' }} </button>
+  </form>
+</div>
+

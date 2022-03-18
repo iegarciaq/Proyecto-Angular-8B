@@ -8,7 +8,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSortModule} from '@angular/material/sort';
 import { MatPaginatorModule } from "@angular/material/paginator";
+import {MatMenuModule} from '@angular/material/menu';
 
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -21,7 +23,9 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatMenuModule,
+    MatDialogModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,7 +35,9 @@ import { MatPaginatorModule } from "@angular/material/paginator";
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatMenuModule,
+    MatDialogModule
   ]
 })
 export class MaterialComponentsModule { }

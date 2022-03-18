@@ -6,3 +6,9 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+  .fabAddProduct{
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+  }

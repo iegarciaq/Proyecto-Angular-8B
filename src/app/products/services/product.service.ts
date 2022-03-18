@@ -8,12 +8,17 @@ import { Product } from '../interfaces/product.interface';
 })
 export class ProductService {
 
-  data : Product[] = [
-    {id: 1, title: 'USB 16Gb', price: 130, createdAt: '04-03-2022', updatedAt: '04-03-2022'},
-  ];
+  getProducts() : Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:5000/products');
+  }
 
-  getProducts() : Observable<any> {
-    return this.http.get('http://localhost:5000/products');
+  addProduct(product : Product){
+    return this.http.post('http://localhost:5000/products', product);
+  }
+  
+  deleteProduct(id: number){ 
+    return this.http.delete(`http://localhost:5000/products/${id}`);
+
   }
 
   constructor(private http: HttpClient) { }
